@@ -16,7 +16,6 @@ public class TestClass {
 	public static void main(String... args) {
 		try {
 			Teakettle teakttle = new Teakettle();
-			Alerter alerter = new Alerter();
 			teakttle.heat();
 		} catch (InterruptedException ex) {
 			Logger.getLogger(TestClass.class.getName()).log(Level.SEVERE, null, ex);
