@@ -8,5 +8,5 @@ package observer.pull.selfimplement;
  */
 
 public class TestTeakerttle {
-
+	
 }
