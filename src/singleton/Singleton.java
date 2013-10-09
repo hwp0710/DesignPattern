@@ -16,6 +16,7 @@ public class Singleton {
 	private volatile static Singleton uniqueInstance;
 
 	private Singleton() {
+
 	}
 
 	public static Singleton getInstance() {
