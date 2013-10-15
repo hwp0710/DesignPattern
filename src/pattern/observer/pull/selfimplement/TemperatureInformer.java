@@ -1,4 +1,4 @@
-package observer.pull.selfimplement;
+package pattern.observer.pull.selfimplement;
 /**
  *
  *

@@ -1,4 +1,4 @@
-package observer;
+package pattern.observer;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -1,4 +1,4 @@
-package observer.pull.javaapi;
+package pattern.observer.pull.javaapi;
 
 import java.text.DecimalFormat;
 import java.util.Random;
