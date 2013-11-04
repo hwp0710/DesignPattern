@@ -10,12 +10,13 @@ import java.util.Random;
  */
 public class Teakettle extends Observable {
 	private int temperature = 90;
+	private boolean switchStatus = true;
 
 	public void heat() throws InterruptedException {
 
 		Observer alarm = new Alerter();
 		this.addObserver(alarm);
-		while (true) {
+		while (switchStatus) {
 			Thread.sleep(new Random().nextInt(500));
 			System.out.println("----------------");
 			System.out.println("now temperature is : " + temperature++);
@@ -24,5 +25,13 @@ public class Teakettle extends Observable {
 			this.notifyObservers(temperature);
 		}
 
+	}
+
+	public boolean isSwitchStatus() {
+		return switchStatus;
+	}
+
+	public void setSwitchStatus(boolean switchStatus) {
+		this.switchStatus = switchStatus;
 	}
 }

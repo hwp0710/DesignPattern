@@ -18,7 +18,7 @@ public class Alerter implements Observer {
 
 	private void alarm() {
 		for (int i = 0; i < 5; i++)
-			System.out.println("--------xx");
+			System.out.println("-------bibibibi-------");
 	}
 
 }
