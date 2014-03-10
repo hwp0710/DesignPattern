@@ -6,62 +6,27 @@
  * 
  */
 
-public class Test {
+class MyThread implements Runnable {
+	private int ticket = 10;
 
-	public static void main(String... args) throws InterruptedException {
-		for (int i = 0; i < 100; i++) {
-			
-			A.setNull();
-			Thread.sleep(100);
-			
-			new Thread(new Runnable() {
-
-				@Override
-				public void run() {
-					if (A.getInstance().test == 0) {
-						System.out.println("success");
-					} else {
-
-					}
-				}
-
-			}).start();
-
-			new Thread(new Runnable() {
-
-				@Override
-				public void run() {
-					A.setNull();
-				}
-
-			}).start();
+	public void run() {
+		for (int i = 0; i < 20; i++) {
+			if (this.ticket > 0) {
+				System.out.println(Thread.currentThread().getName() + " 卖票：ticket" + this.ticket--);
+			}
 		}
 	}
 }
 
-class A {
-	public static volatile A INSTANCE = new A();
-
-	public static int test = 0;
-
-	private A() {
-		test = 1;
-	}
-
-	public static A getInstance() {
-		if (INSTANCE == null) {
-			synchronized (A.class) {
-				if (INSTANCE == null) {
-					INSTANCE = new A();
-				}
-			}
-		}
-
-		return INSTANCE;
-
-	}
-
-	public static void setNull() {
-		INSTANCE = null;
+public class Test {
+	public static void main(String[] args) {
+		// 启动3个线程t1,t2,t3；每个线程各卖10张票！
+		MyThread my = new MyThread();
+		Thread t1 = new Thread(my);
+		Thread t2 = new Thread(my);
+		Thread t3 = new Thread(my);
+		t1.start();
+		t2.start();
+		t3.start();
 	}
 }

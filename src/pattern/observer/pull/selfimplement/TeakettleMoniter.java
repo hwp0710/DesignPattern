@@ -8,7 +8,7 @@ package pattern.observer.pull.selfimplement;
  * 
  */
 
-public class TeakettleAlerter {
+public class TeakettleMoniter {
 
 	public static void main(String... args) {
 
