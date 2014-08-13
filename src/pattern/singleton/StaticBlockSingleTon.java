@@ -16,11 +16,7 @@ public class StaticBlockSingleTon {
 	private static final StaticBlockSingleTon INSTANCE;
 
 	static {
-		try {
-			INSTANCE = new StaticBlockSingleTon();
-		} catch (Exception e) {
-			throw new RuntimeException("Damn it , an error occurred!", e);
-		}
+		INSTANCE = new StaticBlockSingleTon();
 	}
 
 	public static StaticBlockSingleTon getInstatnce() {
