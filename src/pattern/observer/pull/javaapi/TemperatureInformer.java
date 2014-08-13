@@ -12,7 +12,7 @@ import java.util.Observable;
 
 public class TemperatureInformer extends Observable {
 
-	double temperature = 0;
+	double temperature = 0.0;
 
 	public double getTemperature() {
 		return temperature;

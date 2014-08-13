@@ -2,6 +2,7 @@ package pattern.observer.pull.javaapi;
 
 import java.text.DecimalFormat;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 
@@ -34,7 +35,7 @@ public class TestTeakettle {
 			currentTemp += random.nextDouble();
 			informer.changeTemperature(Double.parseDouble(decimalFormat.format(currentTemp)));
 			try {
-				Thread.sleep(random.nextInt(100));
+				TimeUnit.MILLISECONDS.sleep(100);// Thread.sleep(random.nextInt(100));
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

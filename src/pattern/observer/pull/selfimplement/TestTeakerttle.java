@@ -1,4 +1,5 @@
 package pattern.observer.pull.selfimplement;
+
 /**
  *
  *
@@ -8,5 +9,14 @@ package pattern.observer.pull.selfimplement;
  */
 
 public class TestTeakerttle {
-	
+
+	public static void main(String... args) {
+		TeakettleMoniter monitor = new TeakettleMoniter();
+		TemperatureInformer informer = new TemperatureInformer();
+		informer.registerMonitor(monitor);
+		monitor.subscribeInformer(informer);
+
+		informer.heat();
+	}
+
 }

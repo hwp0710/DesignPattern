@@ -14,7 +14,7 @@ import java.util.Observer;
 public class TeakettleAlerter implements Observer {
 	TemperatureInformer informer;
 	TestTeakettle teakettle;
-	final double DANGER_TEMP = 115;
+	final double DANGER_TEMP = 110;
 
 	public void embed(TestTeakettle teakettle) {
 		this.teakettle = teakettle;
@@ -24,7 +24,9 @@ public class TeakettleAlerter implements Observer {
 	public void update(Observable o, Object arg) {
 		informer = (TemperatureInformer) o;
 		if (checkIfOverWornTemperature(informer.getTemperature())) {
-			System.out.println("di di di di di");
+			System.out.println("--------------------------");
+			System.out.println("di di di di di di di di di");
+			System.out.println("--------------------------");
 		}
 	}
 
