@@ -18,6 +18,9 @@ public class LazySingleton {
 
 	public static LazySingleton getInstance() {
 		if (instance == null) {
+			// even we add synchronized keyword , the following code may be
+			// executed twice.so check if instance is null again . to ensure the
+			// instance status is up to date , we set instance as volatile
 			synchronized (LazySingleton.class) {
 				if (instance == null) {
 					instance = new LazySingleton();
