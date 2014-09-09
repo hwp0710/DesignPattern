@@ -11,7 +11,7 @@ public class BoardofDirector extends Approver {
 		if (request.getAmount() < MoneyRange.BOARDOFDIRECTOR.getValue()) {
 			System.out.println(request.getPurpose() + " Need " + request.getAmount() + " , " + getApproverPosition() + " is Handling the request");
 		} else {
-			System.out.println("Can not help");
+			System.out.println("Our Company Can not help");
 		}
 	}
 }
