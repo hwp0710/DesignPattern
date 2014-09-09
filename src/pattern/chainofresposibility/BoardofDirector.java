@@ -2,12 +2,16 @@ package pattern.chainofresposibility;
 
 public class BoardofDirector extends Approver {
 
+	public BoardofDirector() {
+		setApproverPosition("BoardofDirector");
+	}
+
 	@Override
 	public void approve(Request request) {
-		if (request.getAmount() < MoneyRange.CHAIRMAN.getValue()) {
-			System.out.println("ChairMan is handling the request");
+		if (request.getAmount() < MoneyRange.BOARDOFDIRECTOR.getValue()) {
+			System.out.println(request.getPurpose() + " Need " + request.getAmount() + " , " + getApproverPosition() + " is Handling the request");
 		} else {
-			this.getSuccessor().approve(request);
+			System.out.println("Can not help");
 		}
 	}
 }

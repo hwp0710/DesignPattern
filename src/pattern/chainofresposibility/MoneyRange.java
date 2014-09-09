@@ -2,10 +2,10 @@ package pattern.chainofresposibility;
 
 public enum MoneyRange {
 
-	DIRECTOR(5 - 000),
-	MANAGER(20 - 000),
-	CHAIRMAN(50 - 000),
-	BOARDOFDIRECTOR(200 - 000);
+	DIRECTOR(5_000),
+	MANAGER(20_000),
+	CHAIRMAN(50_000),
+	BOARDOFDIRECTOR(200_000);
 
 	private int amount = 0;
 
