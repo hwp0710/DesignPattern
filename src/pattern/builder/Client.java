@@ -17,6 +17,8 @@ public class Client {
 
 		System.out.println(xRoom.getFloor());
 		System.out.println(xRoom.getWindow());
+		System.out.println("end");
+		
 	}
 
 }
